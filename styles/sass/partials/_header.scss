@@ -1,0 +1,58 @@
+header {
+    height: 100vh;
+    background: url("../assets/AdobeStock_300326216_Preview.jpeg") center / cover no-repeat fixed;
+    // position: relative;
+}
+
+nav {
+    height: 10vh;
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right: 0px;
+
+    ul {
+        display: flex;
+
+        a {
+            padding: 5px 10px;
+        }
+    }
+}
+
+.slideMenu {
+    display: none;
+}
+
+.headerContent {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .socialMedia ul {
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        left: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        li {
+            scale: 1.5;
+            max-width: 100%;
+        }
+
+        // a{
+
+        // }
+
+        i {
+            color: #fb8b24;
+            height: 40px;
+            width: 40px;
+        }
+    }
+}

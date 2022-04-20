@@ -1,0 +1,49 @@
+// .projects {
+//     background-image: linear-gradient(#FAFAFA, #191919);
+// }
+
+.projectsContainer {
+    padding: 50px 0;
+
+    h2 {
+        padding: 50px 0;
+    }
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+
+
+
+    li {
+        display: flex;
+        position: relative;
+        width: calc((100% / 3) - 10px);
+
+        &:hover,
+        &:focus {
+
+            .galleryImgContainer {
+                transition: 0.5s;
+                opacity: 0.3;
+            }
+
+            .galleryTextContainer {
+                transition: 0.5s;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.galleryImgContainer {
+    opacity: 1;
+}
+
+.galleryTextContainer {
+    position: absolute;
+    opacity: 0;
+}

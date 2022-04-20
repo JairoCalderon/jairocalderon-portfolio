@@ -1,0 +1,35 @@
+.contact {
+    padding: 50px 0;
+    // background-image: linear-gradient(#191919, #FAFAFA);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 50px;
+
+    input {
+        margin: 5px 0;
+        border: 0 0 2px 0;
+        // border-bottom: 2px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+}
+
+.personalInfo {
+    display: flex;
+    justify-content: space-between;
+
+    input[type=text],
+    input[type=email] {
+        width: calc(50% - 5px);
+    }
+
+    // display: flex;
+}
