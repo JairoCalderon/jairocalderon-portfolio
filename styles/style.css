@@ -273,13 +273,11 @@ html {
   font-family: "Times New Roman", Times, serif;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   text-align: center;
   color: #A44A3F;
-}
-
-h2 {
-  text-align: center;
 }
 
 * {
@@ -362,29 +360,6 @@ nav ul a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.headerContent .socialMedia ul {
-  position: absolute;
-  bottom: 50px;
-  right: 50px;
-  left: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.headerContent .socialMedia ul li {
-  scale: 1.5;
-  max-width: 100%;
-}
-.headerContent .socialMedia ul i {
-  color: #fb8b24;
-  height: 40px;
-  width: 40px;
 }
 
 .profile {
@@ -480,6 +455,35 @@ nav ul a {
   padding: 50px 0;
 }
 
+.socialMedia {
+  width: 70%;
+  padding-top: 40px;
+  margin: 0 auto;
+}
+.socialMedia h3 {
+  padding-bottom: 15px;
+}
+.socialMedia ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.socialMedia ul li {
+  scale: 1.5;
+  max-width: 100%;
+}
+.socialMedia ul i {
+  color: #fb8b24;
+  height: 40px;
+  width: 40px;
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -488,16 +492,27 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   padding-top: 50px;
 }
 form input {
-  margin: 5px 0;
-  border: 0 0 2px 0;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  background: transparent;
 }
 form textarea {
   resize: none;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  margin-top: 10px;
+}
+form button {
+  margin: 10px 0;
 }
 
 .personalInfo {
@@ -515,4 +530,5 @@ form textarea {
 
 footer {
   text-align: center;
+  color: white;
 }

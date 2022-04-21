@@ -1,7 +1,6 @@
 header {
     height: 100vh;
     background: url("../assets/AdobeStock_300326216.jpeg") center / cover no-repeat fixed;
-    // position: relative;
 }
 
 nav {
@@ -31,28 +30,5 @@ nav {
     justify-content: center;
     align-items: center;
 
-    .socialMedia ul {
-        position: absolute;
-        bottom: 50px;
-        right: 50px;
-        left: 50px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
 
-        li {
-            scale: 1.5;
-            max-width: 100%;
-        }
-
-        // a{
-
-        // }
-
-        i {
-            color: #fb8b24;
-            height: 40px;
-            width: 40px;
-        }
-    }
 }
