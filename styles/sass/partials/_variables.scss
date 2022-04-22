@@ -1,0 +1,43 @@
+$almostWhite: #FAFAFF;
+$aguaMarinho:#60b8ce;
+$blueQuery: #3468ac;
+$cyberYellow:#FFD400;
+$spaceCadet: #2E294E;
+
+// $pinksass: #cb6699;
+// $lightyellow: #f8ffe5;
+// $yellownotes: #e5de71;
+// $orangefire: #f58220;
+
+$montserat: 'Montserrat',
+sans-serif;
+
+$lora: 'Lora',
+serif;
+
+@mixin headline ($size, $fam, $lheight, $cor, $align: center) {
+    font-size: $size;
+    font-family: $fam;
+    line-height: $lheight;
+    color: $cor;
+    text-align: $align;
+}
+
+@mixin bodyText ($size, $fam, $lheight, $cor, $weight, $align: center) {
+    font-size: $size;
+    font-family: $fam;
+    line-height: $lheight;
+    color: $cor;
+    font-weight: $weight;
+    text-align: $align;
+}
+
+@mixin icon ($cor, $size) {
+    color: $cor;
+    font-size: $size;
+}
+
+@mixin anchor ($cor) {
+    color: $cor;
+
+}

@@ -1,6 +1,6 @@
 header {
     height: 100vh;
-    background: url("../assets/AdobeStock_300326216.jpeg") center / cover no-repeat fixed;
+    background: url("../assets/AdobeStock_264917292.jpeg") center / cover no-repeat;
 }
 
 nav {
@@ -8,14 +8,10 @@ nav {
     display: flex;
     justify-content: end;
     position: absolute;
-    right: 0px;
+    left: 0px;
 
     ul {
         display: flex;
-
-        a {
-            padding: 5px 10px;
-        }
     }
 }
 
@@ -27,8 +23,10 @@ nav {
     height: 100vh;
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 
-
+    p {
+        font-size: 2rem;
+    }
 }

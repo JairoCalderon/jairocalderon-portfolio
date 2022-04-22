@@ -270,18 +270,60 @@ html {
 }
 
 html {
-  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-family: "Lora", serif;
+  line-height: 1.7;
+  color: #2E294E;
+  font-weight: bold;
+  text-align: center;
 }
 
-h1,
-h2,
-h3 {
+h1 {
+  font-size: 4rem;
+  font-family: "Montserat";
+  line-height: 1.2;
+  color: #FAFAFF;
   text-align: center;
-  color: #FFB20F;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+  color: #FAFAFF;
+  text-align: center;
+  text-decoration: underline;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+  color: #FAFAFF;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+  color: #FAFAFF;
+  text-align: center;
+  margin: 20px 0 30px 0;
 }
 
 a {
-  color: #FF2A40;
+  color: #2E294E;
+  font-family: "Montserrat", sans-serif;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover, a:focus {
+  background-color: #FAFAFF;
 }
 
 * {
@@ -291,8 +333,8 @@ a {
 
 html {
   font-size: 125%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FAFAFA), to(#191919));
-  background-image: linear-gradient(#FAFAFA, #191919);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#60b8ce), to(#3468ac));
+  background-image: linear-gradient(#60b8ce, #3468ac);
 }
 
 .wrapper {
@@ -317,14 +359,9 @@ a {
   display: inline-block;
 }
 
-.toolkit img {
-  height: 100px;
-  width: 100px;
-}
-
 header {
   height: 100vh;
-  background: url("../assets/AdobeStock_300326216.jpeg") center/cover no-repeat fixed;
+  background: url("../assets/AdobeStock_264917292.jpeg") center/cover no-repeat;
 }
 
 nav {
@@ -336,15 +373,12 @@ nav {
       -ms-flex-pack: end;
           justify-content: end;
   position: absolute;
-  right: 0px;
+  left: 0px;
 }
 nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-nav ul a {
-  padding: 5px 10px;
 }
 
 .slideMenu {
@@ -357,12 +391,15 @@ nav ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.headerContent p {
+  font-size: 2rem;
 }
 
 .profile {
@@ -374,16 +411,16 @@ nav ul a {
           align-items: center;
 }
 .profile .profileImgContainer {
-  max-width: 50%;
   margin: 50px 0;
 }
 .profile .profileImgContainer img {
-  height: 50%;
+  width: 80%;
   border-radius: 50%;
   margin: 0 auto;
 }
 .profile .profileTextContainer {
-  text-align: center;
+  width: 50%;
+  text-align: left;
   margin: 50px 0;
 }
 
@@ -406,15 +443,17 @@ nav ul a {
 .toolkit li {
   width: calc(20% - 10px);
   padding: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.toolkit li img {
+.toolkit li i {
+  display: inline-block;
+  font-size: 5rem;
   margin: 0 auto;
 }
 
 .projectsContainer {
-  padding: 50px 0;
-}
-.projectsContainer h2 {
   padding: 50px 0;
 }
 
@@ -461,17 +500,9 @@ nav ul a {
   -webkit-transition: 0.6s ease-in-out;
   transition: 0.6s ease-in-out;
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 50%;
   opacity: 0;
-}
-.galleryTextContainer a {
-  margin: 5px;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-.galleryTextContainer a:hover, .galleryTextContainer a:focus {
-  background-color: white;
 }
 
 .contact {
@@ -502,9 +533,10 @@ nav ul a {
   max-width: 100%;
 }
 .socialMedia ul i {
-  color: #FF2A40;
-  height: 40px;
-  width: 40px;
+  display: inline-block;
+  color: #60b8ce;
+  font-size: 2rem;
+  margin: 0 auto;
 }
 
 form {
@@ -522,7 +554,7 @@ form {
 form input {
   margin: 10px 0;
   border: none;
-  border-bottom: 2px solid #FF2A40;
+  border-bottom: 2px solid #FFD400;
   color: white;
   background: transparent;
 }
@@ -530,12 +562,21 @@ form textarea {
   resize: none;
   background: transparent;
   border: none;
-  border-bottom: 2px solid #FF2A40;
+  border-bottom: 2px solid #FFD400;
   color: white;
   margin-top: 10px;
 }
 form button {
   margin: 10px 0;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFD400;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+form button:hover, form button:focus {
+  background-color: #FAFAFF;
 }
 
 .personalInfo {

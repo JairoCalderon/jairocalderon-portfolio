@@ -1,9 +1,10 @@
+// .projects {
+//     background-color: $aguamarinho;
+// }
+
 .projectsContainer {
     padding: 50px 0;
 
-    h2 {
-        padding: 50px 0;
-    }
 }
 
 .gallery {
@@ -47,19 +48,8 @@
     text-align: center;
     transition: 0.6s ease-in-out;
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     opacity: 0;
     // border: 1px solid white;
-
-    a {
-        margin: 5px;
-        padding: 5px 10px;
-        border-radius: 5px;
-
-        &:hover,
-        &:focus {
-            background-color: white;
-        }
-    }
 }
