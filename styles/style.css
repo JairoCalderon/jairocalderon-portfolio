@@ -277,7 +277,11 @@ h1,
 h2,
 h3 {
   text-align: center;
-  color: #A44A3F;
+  color: #FFB20F;
+}
+
+a {
+  color: #FF2A40;
 }
 
 * {
@@ -311,7 +315,6 @@ ul {
 a {
   text-decoration: none;
   display: inline-block;
-  color: black;
 }
 
 .toolkit img {
@@ -419,36 +422,56 @@ nav ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 250px;
 }
 .gallery li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  width: calc(33.3333333333% - 10px);
 }
 .gallery li:hover .galleryImgContainer, .gallery li:focus .galleryImgContainer {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  opacity: 0.3;
+  opacity: 0.7;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .gallery li:hover .galleryTextContainer, .gallery li:focus .galleryTextContainer {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   opacity: 1;
 }
 
 .galleryImgContainer {
+  width: 50%;
+  margin: 0 auto;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
   opacity: 1;
 }
 
 .galleryTextContainer {
+  text-align: center;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
   position: absolute;
+  top: 30%;
+  left: 50%;
   opacity: 0;
+}
+.galleryTextContainer a {
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.galleryTextContainer a:hover, .galleryTextContainer a:focus {
+  background-color: white;
 }
 
 .contact {
@@ -479,7 +502,7 @@ nav ul a {
   max-width: 100%;
 }
 .socialMedia ul i {
-  color: #fb8b24;
+  color: #FF2A40;
   height: 40px;
   width: 40px;
 }
@@ -499,7 +522,7 @@ form {
 form input {
   margin: 10px 0;
   border: none;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #FF2A40;
   color: white;
   background: transparent;
 }
@@ -507,7 +530,7 @@ form textarea {
   resize: none;
   background: transparent;
   border: none;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #FF2A40;
   color: white;
   margin-top: 10px;
 }
