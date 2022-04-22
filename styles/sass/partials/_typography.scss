@@ -1,14 +1,36 @@
 html {
-    font-family: 'Times New Roman', Times, serif;
+    @include bodyText(1rem, $lora, 1.7, $spaceCadet, bold);
 }
 
-h1,
-h2,
+h1 {
+    @include headline(4rem, 'Montserat', 1.2, $almostWhite);
+}
+
+h2 {
+    @include headline(3rem, $montserat, 1.2, $almostWhite);
+    text-decoration: underline;
+    padding-bottom: 20px;
+}
+
 h3 {
-    text-align: center;
-    color: #FFB20F;
+    @include headline(2rem, $montserat, 1.2, $almostWhite);
+}
+
+h4 {
+    @include headline(1.5rem, $montserat, 1.2, $almostWhite);
+    margin: 20px 0 30px 0;
 }
 
 a {
-    color: #FF2A40;
+    color: $spaceCadet;
+    font-family: $montserat;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+
+    &:hover,
+    &:focus {
+        background-color: $almostWhite;
+    }
 }
