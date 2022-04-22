@@ -8,24 +8,25 @@
 
 .gallery {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    height: 250px;
+    // border: 1px solid white;
+
 
     li {
         display: flex;
         position: relative;
-        width: calc((100% / 3) - 10px);
 
         &:hover,
         &:focus {
 
             .galleryImgContainer {
-                transition: 0.5s;
-                opacity: 0.3;
+                opacity: 0.7;
+                transform: translateX(-50%)
             }
 
             .galleryTextContainer {
-                transition: 0.5s;
                 opacity: 1;
             }
         }
@@ -33,10 +34,32 @@
 }
 
 .galleryImgContainer {
+    width: 50%;
+    margin: 0 auto;
+    transition: 0.6s ease-in-out;
     opacity: 1;
+    // border: 1px solid white;
+
 }
 
+
 .galleryTextContainer {
+    text-align: center;
+    transition: 0.6s ease-in-out;
     position: absolute;
+    top: 30%;
+    left: 50%;
     opacity: 0;
+    // border: 1px solid white;
+
+    a {
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+
+        &:hover,
+        &:focus {
+            background-color: white;
+        }
+    }
 }
