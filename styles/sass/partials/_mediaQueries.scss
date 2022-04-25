@@ -1,0 +1,217 @@
+@media(max-width:1260px) {
+    .galleryTextContainer {
+        top: 15%
+    }
+}
+
+@media(max-width:960px) {
+    header {
+        background-position: -950px 0px;
+
+        h1 {
+            color: $spaceCadet;
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+        }
+    }
+
+    .profile {
+        flex-direction: column;
+
+        .profileImgContainer {
+            img {
+                width: 60%;
+            }
+        }
+
+        .profileTextContainer {
+            width: 90%;
+            text-align: center;
+            margin: 0px;
+        }
+    }
+
+    .galleryTextContainer {
+        top: 10%
+    }
+
+    .socialMedia {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+
+@media(max-width:860px) {
+    .toolkit {
+        li {
+            i {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    .gallery {
+        li {
+            flex-direction: column;
+
+            &:hover,
+            &:focus {
+
+                .galleryImgContainer {
+                    transform: translateX(0%);
+                    transform: translateY(-20%)
+                }
+            }
+        }
+    }
+
+    .galleryTextContainer {
+        position: relative;
+        top: -100px;
+        left: 0%;
+    }
+
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    .headerContent {
+        p {
+            font-size: 1.75em;
+        }
+    }
+}
+
+
+@media(max-width:620px) {
+    header {
+        background-image: url("../assets/AdobeStock_318975944.jpeg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .headerContent {
+        text-align: right;
+        justify-content: end;
+        align-items: flex-start;
+
+        h1 {
+            color: $almostWhite;
+            text-align: right;
+        }
+
+        p {
+            color: $almostWhite;
+            text-align: right;
+        }
+    }
+
+
+    labe[for=toggle] {
+        display: inline-block;
+    }
+
+    .mainMenu {
+        flex-direction: column;
+        background-color: rgba(10, 10, 10, 0.6);
+        position: absolute;
+        right: 50px;
+    }
+
+    .toolkit {
+
+        li {
+            width: calc(100% / 3 - 10px);
+
+            i {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .gallery {
+        li {
+
+            height: 100%;
+
+            &:hover,
+            &:focus {
+
+                .galleryImgContainer {
+                    opacity: 1;
+                    transform: translateX(0%);
+                    transform: translateY(0%)
+                }
+            }
+        }
+    }
+
+    .galleryImgContainer {
+        width: 80%;
+        margin: 0 auto;
+        transition: none;
+
+    }
+
+    .galleryTextContainer {
+        position: unset;
+        opacity: 1;
+    }
+
+    .socialMedia {
+        ul {
+            i {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .personalInfo {
+        flex-direction: column;
+
+        input[type=text],
+        input[type=email] {
+            width: 100%;
+        }
+
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    .headerContent {
+        p {
+            font-size: 1.5em;
+        }
+    }
+}

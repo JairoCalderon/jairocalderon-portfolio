@@ -3,7 +3,7 @@ html {
 }
 
 h1 {
-    @include headline(4rem, 'Montserat', 1.2, $almostWhite);
+    @include headline(3.5rem, $montserat, 1.25, $almostWhite);
 }
 
 h2 {
