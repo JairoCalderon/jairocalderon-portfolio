@@ -1,6 +1,10 @@
 header {
     height: 100vh;
-    background: url("../assets/AdobeStock_264917292.jpeg") center / cover no-repeat;
+    // background: url("../assets/AdobeStock_264917292.jpeg") center / cover no-repeat;
+    background-image: url("../assets/AdobeStock_264917292.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 nav {
@@ -15,7 +19,8 @@ nav {
     }
 }
 
-.slideMenu {
+label[for=toggle],
+input[type=checkbox] {
     display: none;
 }
 
@@ -30,3 +35,39 @@ nav {
         font-size: 2rem;
     }
 }
+
+.arrow {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    // transform: translate(50px, -50px);
+
+    span {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-bottom: 5px solid $almostWhite;
+        border-right: 5px solid $almostWhite;
+        transform: rotate(45deg);
+
+        // @include keyframes(scrollDown) {
+        //     0% {
+        //         transform: translateY(0)
+        //     }
+
+        //     100% {
+        //         transform: translateY(-20px)
+        //     }
+        // }
+
+        // @include animate(scrollDown, 1.5s, linear, infinite)
+    }
+}
+
+// .arrow span:nth-child(2) {
+//     margin-bottom: 10px;
+// }
+
+// .arrow span:nth-child(3) {
+//     margin-bottom: 10px;
+// }

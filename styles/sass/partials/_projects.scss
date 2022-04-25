@@ -1,7 +1,3 @@
-// .projects {
-//     background-color: $aguamarinho;
-// }
-
 .projectsContainer {
     padding: 50px 0;
 
@@ -12,19 +8,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    // border: 1px solid white;
-
 
     li {
         display: flex;
         position: relative;
+        height: 500px;
 
         &:hover,
         &:focus {
 
             .galleryImgContainer {
                 opacity: 0.7;
-                transform: translateX(-50%)
+                transform: translateX(-42%)
             }
 
             .galleryTextContainer {
@@ -35,12 +30,10 @@
 }
 
 .galleryImgContainer {
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     transition: 0.6s ease-in-out;
     opacity: 1;
-    // border: 1px solid white;
-
 }
 
 
@@ -51,5 +44,4 @@
     top: 25%;
     left: 50%;
     opacity: 0;
-    // border: 1px solid white;
 }

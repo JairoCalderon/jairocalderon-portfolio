@@ -279,9 +279,9 @@ html {
 }
 
 h1 {
-  font-size: 4rem;
-  font-family: "Montserat";
-  line-height: 1.2;
+  font-size: 3.5rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.25;
   color: #FAFAFF;
   text-align: center;
 }
@@ -361,7 +361,10 @@ a {
 
 header {
   height: 100vh;
-  background: url("../assets/AdobeStock_264917292.jpeg") center/cover no-repeat;
+  background-image: url("../assets/AdobeStock_264917292.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 nav {
@@ -381,7 +384,8 @@ nav ul {
   display: flex;
 }
 
-.slideMenu {
+label[for=toggle],
+input[type=checkbox] {
   display: none;
 }
 
@@ -400,6 +404,21 @@ nav ul {
 }
 .headerContent p {
   font-size: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+}
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #FAFAFF;
+  border-right: 5px solid #FAFAFF;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .profile {
@@ -426,6 +445,7 @@ nav ul {
 
 .skills {
   padding: 50px 0;
+  margin-top: 25px;
 }
 .skills h2 {
   text-align: center;
@@ -442,6 +462,7 @@ nav ul {
 }
 .toolkit li {
   width: calc(20% - 10px);
+  min-width: 100px;
   padding: 25px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,18 +498,19 @@ nav ul {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  height: 500px;
 }
 .gallery li:hover .galleryImgContainer, .gallery li:focus .galleryImgContainer {
   opacity: 0.7;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateX(-42%);
+          transform: translateX(-42%);
 }
 .gallery li:hover .galleryTextContainer, .gallery li:focus .galleryTextContainer {
   opacity: 1;
 }
 
 .galleryImgContainer {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   -webkit-transition: 0.6s ease-in-out;
   transition: 0.6s ease-in-out;
@@ -595,4 +617,194 @@ form button:hover, form button:focus {
 footer {
   text-align: center;
   color: white;
+}
+
+@media (max-width: 1260px) {
+  .galleryTextContainer {
+    top: 15%;
+  }
+}
+@media (max-width: 960px) {
+  header {
+    background-position: -950px 0px;
+  }
+  header h1 {
+    color: #2E294E;
+    text-align: left;
+  }
+  header p {
+    text-align: left;
+  }
+
+  .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile .profileImgContainer img {
+    width: 60%;
+  }
+  .profile .profileTextContainer {
+    width: 90%;
+    text-align: center;
+    margin: 0px;
+  }
+
+  .galleryTextContainer {
+    top: 10%;
+  }
+
+  .socialMedia {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+@media (max-width: 860px) {
+  .toolkit li i {
+    font-size: 4rem;
+  }
+
+  .gallery li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .gallery li:hover .galleryImgContainer, .gallery li:focus .galleryImgContainer {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+
+  .galleryTextContainer {
+    position: relative;
+    top: -100px;
+    left: 0%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  .headerContent p {
+    font-size: 1.75em;
+  }
+}
+@media (max-width: 620px) {
+  header {
+    background-image: url("../assets/AdobeStock_318975944.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .headerContent {
+    text-align: right;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .headerContent h1 {
+    color: #FAFAFF;
+    text-align: right;
+  }
+  .headerContent p {
+    color: #FAFAFF;
+    text-align: right;
+  }
+
+  labe[for=toggle] {
+    display: inline-block;
+  }
+
+  .mainMenu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(10, 10, 10, 0.6);
+    position: absolute;
+    right: 50px;
+  }
+
+  .toolkit li {
+    width: calc(33.3333333333% - 10px);
+  }
+  .toolkit li i {
+    font-size: 3rem;
+  }
+
+  .gallery li {
+    height: 100%;
+  }
+  .gallery li:hover .galleryImgContainer, .gallery li:focus .galleryImgContainer {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+
+  .galleryImgContainer {
+    width: 80%;
+    margin: 0 auto;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .galleryTextContainer {
+    position: unset;
+    opacity: 1;
+  }
+
+  .socialMedia ul i {
+    font-size: 1rem;
+  }
+
+  .personalInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .personalInfo input[type=text],
+.personalInfo input[type=email] {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .headerContent p {
+    font-size: 1.5em;
+  }
 }
