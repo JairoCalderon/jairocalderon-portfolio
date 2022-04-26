@@ -47,7 +47,6 @@
     }
 }
 
-
 @media(max-width:860px) {
     .toolkit {
         li {
@@ -78,7 +77,6 @@
         left: 0%;
     }
 
-
     h1 {
         font-size: 3rem;
     }
@@ -91,6 +89,10 @@
         font-size: 1.75rem;
     }
 
+    .initialGreetings span {
+        font-size: 3rem;
+    }
+
     .headerContent {
         p {
             font-size: 1.75em;
@@ -101,16 +103,18 @@
 
 @media(max-width:620px) {
     header {
-        background-image: url("../assets/AdobeStock_318975944.jpeg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        background-image: url("../assets/AdobeStock_3189759441.jpg");
+        background-position: -1100px 0px;
     }
 
     .headerContent {
         text-align: right;
         justify-content: end;
         align-items: flex-start;
+
+        .initialGreetings {
+            flex-wrap: wrap;
+        }
 
         h1 {
             color: $almostWhite;
@@ -123,20 +127,49 @@
         }
     }
 
-
-    labe[for=toggle] {
+    label[for=toggle] {
         display: inline-block;
+        height: 40px;
+        padding: 10px;
+        position: fixed;
+        z-index: 30;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-top: 10px;
+
+        i {
+            vertical-align: top;
+            color: $almostWhite;
+        }
     }
 
-    .mainMenu {
+    .slideMenu {
+        transition: 1s;
         flex-direction: column;
         background-color: rgba(10, 10, 10, 0.6);
+        color: $almostWhite;
         position: absolute;
-        right: 50px;
+        z-index: 30;
+        left: -250px;
+        top: 60px;
+
+        a {
+            color: $almostWhite;
+
+            &:hover,
+            &:focus {
+                background-color: #f58220;
+            }
+        }
+
+    }
+
+    input[type="checkbox"]:checked+.slideMenu {
+        left: 7.5%;
+        top: 60px;
+        position: fixed;
     }
 
     .toolkit {
-
         li {
             width: calc(100% / 3 - 10px);
 
@@ -207,6 +240,10 @@
 
     h4 {
         font-size: 1rem;
+    }
+
+    .initialGreetings span {
+        font-size: 2rem;
     }
 
     .headerContent {

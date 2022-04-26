@@ -3,7 +3,7 @@ html {
 }
 
 h1 {
-    @include headline(3.5rem, $montserat, 1.25, $almostWhite);
+    @include headline(3.5rem, $montserat, 1.2, $almostWhite);
 }
 
 h2 {
@@ -32,5 +32,10 @@ a {
     &:hover,
     &:focus {
         background-color: $almostWhite;
+        cursor: pointer;
     }
+}
+
+.initialGreetings span {
+    @include headline(3.5rem, $montserat, 1.25, $almostWhite);
 }

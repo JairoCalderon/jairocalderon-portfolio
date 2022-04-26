@@ -15,17 +15,14 @@
 </head>
 
 <body>
-    <header id="home">
+    <header id="home" class="home">
         <div class="wrapper">
-            <nav>
-                <div class="slideMenu">
-                    <label for="toggle">
-                        <i class="fa-solid fa-bars" aria-hidden="true"></i><span class="sr-only">Menu</span>
-                    </label>
-                    <input type="checkbox" id="toggle" name="toggle">
-                </div>
-
-                <ul class="mainMenu">
+            <nav class="menu">
+                <label for="toggle">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i><span class="sr-only">Menu</span>
+                </label>
+                <input type="checkbox" id="toggle" name="toggle">
+                <ul class="slideMenu">
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#projects">PROJECTS</a></li>
@@ -34,12 +31,12 @@
             </nav>
             <div class="headerContent">
                 <div class="initialGreetings">
-                    <h1>Hi there!!! <br>I'm Jairo Calderon</h1>
+                    <span></span>
+                    <h1>I'm Jairo Calderon</h1>
                     <p>| Front-End Developer |</p>
                 </div>
             </div>
             <div class="arrow">
-                <span></span>
                 <span></span>
                 <span></span>
             </div>
@@ -104,7 +101,7 @@
 
                 <h2>Projects</h2>
                 <ul class="gallery">
-                    <li>
+                    <li tabindex="0">
                         <div class="galleryImgContainer">
                             <img src="./assets/mockuperproj1.png" alt="Screenshoot of Under the Sea Project">
                         </div>
@@ -116,7 +113,7 @@
                             <a href="https://silly-mcclintock-5d3686.netlify.app/">Live</a>
                             <a href="https://github.com/JairoCalderon/ProjectOne.git">Code</a>
                         </div>
-                    </li>
+                    </li tabindex="0">
                     <li>
                         <div class="galleryImgContainer">
                             <img src="./assets/mockuperproj2.png"
@@ -134,7 +131,7 @@
                             <a href="https://github.com/JairoCalderon/recipeAppProjectTwo.git">Code</a>
                         </div>
                     </li>
-                    <li>
+                    <li tabindex="0">
                         <div class="galleryImgContainer">
                             <img src="./assets/mockuperComingSoon.png" alt="Screenshoot of Under the Sea Project">
                         </div>
@@ -155,7 +152,7 @@
             <div class="wrapper">
                 <h2>Get in touch!</h2>
                 <div class="connectWithUs">
-                    <form action="submit">
+                    <form action="mailto:j.calderoneng@gmail.com" method="post" enctype="text/plain">
                         <div class="personalInfo">
                             <label for="name" class="sr-only">Name</label>
                             <input type="text" id="name" placeholder="Name" required="true">
@@ -196,7 +193,6 @@
                             </ul>
 
                     </div>
-                    <!-- </div> -->
                 </div>
         </section>
     </main>
