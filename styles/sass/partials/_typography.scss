@@ -8,7 +8,6 @@ h1 {
 
 h2 {
     @include headline(3rem, $montserat, 1.2, $almostWhite);
-    text-decoration: underline;
     padding-bottom: 20px;
 }
 
