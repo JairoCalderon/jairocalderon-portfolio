@@ -66,10 +66,9 @@ form {
         &:hover,
         &:focus {
             background-color: $almostWhite;
+            cursor: pointer;
         }
-
     }
-
 }
 
 .personalInfo {
@@ -80,5 +79,20 @@ form {
     input[type=email] {
         width: calc(50% - 5px);
     }
+}
 
+::-webkit-input-placeholder {
+    color: #161925;
+}
+
+::-moz-placeholder {
+    color: #161925;
+}
+
+:-ms-input-placeholder {
+    color: #161925;
+}
+
+:-moz-placeholder {
+    color: #161925;
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -281,7 +282,7 @@ html {
 h1 {
   font-size: 3.5rem;
   font-family: "Montserrat", sans-serif;
-  line-height: 1.25;
+  line-height: 1.2;
   color: #FAFAFF;
   text-align: center;
 }
@@ -324,6 +325,15 @@ a {
 }
 a:hover, a:focus {
   background-color: #FAFAFF;
+  cursor: pointer;
+}
+
+.initialGreetings span {
+  font-size: 3.5rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.25;
+  color: #FAFAFF;
+  text-align: center;
 }
 
 * {
@@ -361,27 +371,29 @@ a {
 
 header {
   height: 100vh;
-  background-image: url("../assets/AdobeStock_264917292.jpeg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url("../assets/AdobeStock_2649172923.jpg") center/cover no-repeat;
+  position: relative;
 }
 
-nav {
+.menu {
   height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  position: absolute;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: relative;
   left: 0px;
 }
-nav ul {
+
+.slideMenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 label[for=toggle],
@@ -390,17 +402,89 @@ input[type=checkbox] {
 }
 
 .headerContent {
-  height: 100vh;
-  text-align: center;
+  height: 90vh;
+  text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.headerContent span::before {
+  content: "";
+  -webkit-animation: typing 30s ease-in-out infinite;
+          animation: typing 30s ease-in-out infinite;
+}
+@-webkit-keyframes typing {
+  0% {
+    content: "Hello!";
+  }
+  10% {
+    content: "Olá!";
+  }
+  20% {
+    content: "Salut!";
+  }
+  30% {
+    content: "Ciao!";
+  }
+  40% {
+    content: "Sata srī akāla!";
+  }
+  50% {
+    content: "Kon'nichiwa!";
+  }
+  60% {
+    content: "Hallo!";
+  }
+  70% {
+    content: "Nǐ hǎo!";
+  }
+  80% {
+    content: "Pryvit!";
+  }
+  90% {
+    content: "Namaste!";
+  }
+  100% {
+    content: "Hola!";
+  }
+}
+@keyframes typing {
+  0% {
+    content: "Hello!";
+  }
+  10% {
+    content: "Olá!";
+  }
+  20% {
+    content: "Salut!";
+  }
+  30% {
+    content: "Ciao!";
+  }
+  40% {
+    content: "Sata srī akāla!";
+  }
+  50% {
+    content: "Kon'nichiwa!";
+  }
+  60% {
+    content: "Hallo!";
+  }
+  70% {
+    content: "Nǐ hǎo!";
+  }
+  80% {
+    content: "Pryvit!";
+  }
+  90% {
+    content: "Namaste!";
+  }
+  100% {
+    content: "Hola!";
+  }
 }
 .headerContent p {
   font-size: 2rem;
@@ -410,6 +494,8 @@ input[type=checkbox] {
   position: absolute;
   bottom: 3%;
   left: 50%;
+  -webkit-animation: arrow 1s linear 0s infinite normal;
+          animation: arrow 1s linear 0s infinite normal;
 }
 .arrow span {
   display: block;
@@ -419,6 +505,26 @@ input[type=checkbox] {
   border-right: 5px solid #FAFAFF;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+@-webkit-keyframes arrow {
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes arrow {
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 .profile {
@@ -500,12 +606,12 @@ input[type=checkbox] {
   position: relative;
   height: 500px;
 }
-.gallery li:hover .galleryImgContainer, .gallery li:focus .galleryImgContainer {
+.gallery li:hover .galleryImgContainer, .gallery li:focus-within .galleryImgContainer {
   opacity: 0.7;
   -webkit-transform: translateX(-42%);
           transform: translateX(-42%);
 }
-.gallery li:hover .galleryTextContainer, .gallery li:focus .galleryTextContainer {
+.gallery li:hover .galleryTextContainer, .gallery li:focus-within .galleryTextContainer {
   opacity: 1;
 }
 
@@ -599,6 +705,7 @@ form button {
 }
 form button:hover, form button:focus {
   background-color: #FAFAFF;
+  cursor: pointer;
 }
 
 .personalInfo {
@@ -612,6 +719,22 @@ form button:hover, form button:focus {
 .personalInfo input[type=text],
 .personalInfo input[type=email] {
   width: calc(50% - 5px);
+}
+
+::-webkit-input-placeholder {
+  color: #161925;
+}
+
+::-moz-placeholder {
+  color: #161925;
+}
+
+:-ms-input-placeholder {
+  color: #161925;
+}
+
+:-moz-placeholder {
+  color: #161925;
 }
 
 footer {
@@ -699,16 +822,18 @@ footer {
     font-size: 1.75rem;
   }
 
+  .initialGreetings span {
+    font-size: 3rem;
+  }
+
   .headerContent p {
     font-size: 1.75em;
   }
 }
 @media (max-width: 620px) {
   header {
-    background-image: url("../assets/AdobeStock_318975944.jpeg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url("../assets/AdobeStock_3189759441.jpg");
+    background-position: -1100px 0px;
   }
 
   .headerContent {
@@ -720,6 +845,10 @@ footer {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .headerContent .initialGreetings {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .headerContent h1 {
     color: #FAFAFF;
     text-align: right;
@@ -729,18 +858,45 @@ footer {
     text-align: right;
   }
 
-  labe[for=toggle] {
+  label[for=toggle] {
     display: inline-block;
+    height: 40px;
+    padding: 10px;
+    position: fixed;
+    z-index: 30;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+  }
+  label[for=toggle] i {
+    vertical-align: top;
+    color: #FAFAFF;
   }
 
-  .mainMenu {
+  .slideMenu {
+    -webkit-transition: 1s;
+    transition: 1s;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     background-color: rgba(10, 10, 10, 0.6);
+    color: #FAFAFF;
     position: absolute;
-    right: 50px;
+    z-index: 30;
+    left: -250px;
+    top: 60px;
+  }
+  .slideMenu a {
+    color: #FAFAFF;
+  }
+  .slideMenu a:hover, .slideMenu a:focus {
+    background-color: #f58220;
+  }
+
+  input[type=checkbox]:checked + .slideMenu {
+    left: 7.5%;
+    top: 60px;
+    position: fixed;
   }
 
   .toolkit li {
@@ -802,6 +958,10 @@ footer {
 
   h4 {
     font-size: 1rem;
+  }
+
+  .initialGreetings span {
+    font-size: 2rem;
   }
 
   .headerContent p {

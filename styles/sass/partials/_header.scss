@@ -1,22 +1,20 @@
 header {
     height: 100vh;
-    // background: url("../assets/AdobeStock_264917292.jpeg") center / cover no-repeat;
-    background-image: url("../assets/AdobeStock_264917292.jpeg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url("../assets/AdobeStock_2649172923.jpg") center / cover no-repeat;
+    position: relative;
 }
 
-nav {
+.menu {
     height: 10vh;
     display: flex;
-    justify-content: end;
-    position: absolute;
+    justify-content: start;
+    position: relative;
     left: 0px;
+}
 
-    ul {
-        display: flex;
-    }
+.slideMenu {
+    display: flex;
+    align-items: center
 }
 
 label[for=toggle],
@@ -25,11 +23,61 @@ input[type=checkbox] {
 }
 
 .headerContent {
-    height: 100vh;
-    text-align: center;
+    height: 90vh;
+    text-align: left;
     display: flex;
-    justify-content: start;
     align-items: center;
+
+    span::before {
+        content: "";
+        animation: typing 30s ease-in-out infinite;
+    }
+
+    @keyframes typing {
+        0% {
+            content: "Hello!";
+        }
+
+        10% {
+            content: "Olá!";
+        }
+
+        20% {
+            content: "Salut!";
+        }
+
+        30% {
+            content: "Ciao!";
+        }
+
+        40% {
+            content: "Sata srī akāla!";
+        }
+
+        50% {
+            content: "Kon'nichiwa!";
+        }
+
+        60% {
+            content: "Hallo!";
+        }
+
+        70% {
+            content: "Nǐ hǎo!";
+        }
+
+        80% {
+            content: "Pryvit!";
+        }
+
+        90% {
+            content: "Namaste!";
+        }
+
+        100% {
+            content: "Hola!";
+        }
+    }
 
     p {
         font-size: 2rem;
@@ -40,7 +88,7 @@ input[type=checkbox] {
     position: absolute;
     bottom: 3%;
     left: 50%;
-    // transform: translate(50px, -50px);
+    animation: arrow 1s linear 0s infinite normal;
 
     span {
         display: block;
@@ -49,25 +97,15 @@ input[type=checkbox] {
         border-bottom: 5px solid $almostWhite;
         border-right: 5px solid $almostWhite;
         transform: rotate(45deg);
+    }
 
-        // @include keyframes(scrollDown) {
-        //     0% {
-        //         transform: translateY(0)
-        //     }
+    @keyframes arrow {
+        50% {
+            transform: translateY(-10px);
+        }
 
-        //     100% {
-        //         transform: translateY(-20px)
-        //     }
-        // }
-
-        // @include animate(scrollDown, 1.5s, linear, infinite)
+        100% {
+            transform: translateY(0px);
+        }
     }
 }
-
-// .arrow span:nth-child(2) {
-//     margin-bottom: 10px;
-// }
-
-// .arrow span:nth-child(3) {
-//     margin-bottom: 10px;
-// }
