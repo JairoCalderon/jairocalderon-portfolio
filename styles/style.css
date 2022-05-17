@@ -547,6 +547,9 @@ input[type=checkbox] {
   text-align: left;
   margin: 50px 0;
 }
+.profile .profileTextContainer p {
+  margin-top: 10px;
+}
 
 .skills {
   padding: 50px 0;
