@@ -636,6 +636,16 @@ input[type=checkbox] {
   opacity: 0;
 }
 
+.dragonfly {
+  text-align: center;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  opacity: 0;
+}
+
 .contact {
   padding: 50px 0;
 }
